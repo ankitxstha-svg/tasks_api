@@ -12,7 +12,7 @@ A small **multi-tenant Tasks API** built to demonstrate authentication, authoriz
 - [x] Fastify server with health check (`GET /health`)
 - [x] PostgreSQL + Prisma schema (User, Workspace, Membership, Task)
 - [x] Initial migration and Prisma Client generation
-- [ ] JWT verification + user sync (`GET /me`)
+- [x] JWT verification + user sync (`GET /me`)
 - [ ] Workspace & task routes with role-based access control
 - [ ] Validation, rate limiting, tests, and demo README
 
