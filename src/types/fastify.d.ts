@@ -11,5 +11,9 @@ declare module "fastify" {
             email: string;
             isAdmin: boolean;
         };
+        membership?:{
+            role: "owner" | "member";
+            workspaceId: string;
+        };
     }
 }

@@ -7,14 +7,16 @@ A small **multi-tenant Tasks API** built to demonstrate authentication, authoriz
 
 ## Status
 
-**In progress** — current milestone:
+Work in progress — multi-tenant Tasks API with Auth0 + RBAC.
 
-- [x] Fastify server with health check (`GET /health`)
-- [x] PostgreSQL + Prisma schema (User, Workspace, Membership, Task)
-- [x] Initial migration and Prisma Client generation
-- [x] JWT verification + user sync (`GET /me`)
-- [ ] Workspace & task routes with role-based access control
-- [ ] Validation, rate limiting, tests, and demo README
+- [x] Health check (`GET /health`)
+- [x] Prisma schema + migrations (User, Workspace, Membership, Task)
+- [x] Auth0 JWT verification + user sync (`GET /me`)
+- [x] Authorization middleware (membership, roles)
+- [x] Workspaces (create, get, delete)
+- [x] Invite members (owner only)
+- [x] Tasks (list, create, delete with creator/owner rules)
+- [ ] Zod validation, rate limiting, tests, demo README
 
 ## What this will demonstrate
 
