@@ -24,6 +24,15 @@ export async function authMiddleware(
 
     const token = header.slice("Bearer ".length);
 
+        // TEST ONLY — skip Auth0 in automated tests
+    if (process.env.NODE_ENV === "test") {
+    request.auth = {
+        sub: token,
+        email: `${token.replace("|", "-")}@test.local`,
+    };
+    return;
+    }
+
     try {
         const {payload} = await jwtVerify(token, JWKS, {issuer, audience,});
 
