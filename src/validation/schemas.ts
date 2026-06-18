@@ -26,9 +26,9 @@ export const createTaskBodySchema = z.object({
 });
 
 export const workspaceIdParamSchema = z.object({
-    workspaceId: z.string().uuid("workspace must be valid uuid"),
+    workspaceId: z.uuid("workspace must be valid uuid"),
 });
 
 export const taskIdParamSchema = z.object({
-    taskId: z.string().uuid("taskId must be a valid UUID"),
+    taskId: z.uuid("taskId must be a valid UUID"),
 })
